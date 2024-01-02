@@ -1,4 +1,4 @@
-let x={valor:30};
-let y=x;
-console.log(x.valor);
-console.log(y);
+const a=[1,2,3];
+a.push(400);
+
+console.log(a);
