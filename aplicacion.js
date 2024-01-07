@@ -1,5 +1,9 @@
-const a=[1,2,3];
-a.push(400);
+const a=45;
 
-console.log(a);
+function print(x){
+    x=x+1;
+    console.log(x);
+};
+print(a);
+
 console.log(a);
