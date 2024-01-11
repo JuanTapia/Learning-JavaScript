@@ -41,6 +41,11 @@ console.log(x2);
                let num=3;
                console.log(num+=2);    // 5
                console.log(num);       // 5
+               //Example 6
+               let num1=10;
+               console.log(num1++ + ++num1 + num1++); //34
+               console.log(num1++); //13
+               console.log(num1);  //14
 
 // decrement by 1
 let x3=45;
