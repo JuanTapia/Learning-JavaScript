@@ -8,3 +8,19 @@ x=`Hola, trabajo como ${profesion} at ${empresa} por mas de ${2+8} anos`
 
 
 console.log(x);
+
+// String Properties and Methods
+let x1;
+x1='Hello world';
+console.log(x1, typeof x1);  //Hello world  String
+
+x1=new String('Hello World');
+console.log(x1, typeof x1);  // object
+x1=x1.length;           
+console.log(x1);             // 11
+
+let x2;
+x2=new String('Hola a todos');
+console.log(x2[0],x2[1],x2[2]); // H o l
+console.log(x2.__proto__); // shows a list
+
