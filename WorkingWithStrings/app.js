@@ -32,7 +32,7 @@ x3=x2.substring(5);     // a todos, index 5 to the rest [5,--->]
 // substring and slice are similar but slice can go positive or negative
 x3=x2.substring(0,8); // output: Hola a t  [0,8> 0 is included but not 8
 x3=x2.slice(0,8); // output: Hola a t  [0,8> 0 is included but not 8
-x3=x2.slice(8); // output: odos [8,to the rest of the string toward right]
+x3=x2.slice(8); // output: odos [8,to the rest of the string toward right]. it works with Substring() too.
 x3=x2.slice(-9,-3); // output: a a to  <-9,-3]
 // x3=x2.substring(-9,-3);  Substrings dont take negative// substring and slice are similar but slice can go positive or negative
 x3=x2.trim();  // it gets rid of white space at the beginnig and end of the String, but not in between words. ('        Hola a todos        ');
@@ -44,4 +44,14 @@ x3=x2.split('');   // ['H', 'o', 'l', 'a', ' ', 'a', ' ', 't', 'o', 'd', 'o', 's
 x3=x2.split(' ');  // ['Hola', 'a', 'todos']
 
 console.log(x3);  
+
+// First Challenge with Strings
+const myString='developer';
+// console.log(myString[0].toUpperCase());
+// console.log(myString.slice(1));
+const myNewString=myString[0].toUpperCase()+myString.slice(1);
+console.log(myNewString);
+const miCadena='developer';
+miNuevaCadena=`${miCadena.charAt(0).toUpperCase()}${miCadena.substring(1)}`;
+console.log(miNuevaCadena);
 
