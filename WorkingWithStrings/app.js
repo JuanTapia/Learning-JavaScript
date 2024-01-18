@@ -42,6 +42,7 @@ x3=x2.valueOf();         // it gives the primitive value of the string, even tho
 x3=x2.split();          //Output: ['Hola a todos'] since we have not put anything. it gives an array with one element(the string)
 x3=x2.split('');   // ['H', 'o', 'l', 'a', ' ', 'a', ' ', 't', 'o', 'd', 'o', 's'] it gives an array which elemens are every character of the strings.
 x3=x2.split(' ');  // ['Hola', 'a', 'todos']
+x3=x2[x2.length-1];  // output: s , This gives last character of the string.
 
 console.log(x3);  
 
@@ -54,4 +55,22 @@ console.log(myNewString);
 const miCadena='developer';
 miNuevaCadena=`${miCadena.charAt(0).toUpperCase()}${miCadena.substring(1)}`;
 console.log(miNuevaCadena);
+
+// String.indexof() and String.lastIndexof()
+
+const x4='The code undefined code code !';
+x5=x4.indexOf('R');      // output: -1 It's searching for something that is not there.
+x5=x4.indexOf('Code');      // output: -1 It's also case sencitive, capitol C is not there.
+x5=x4.indexOf('T');      // output: 0
+x5=x4.indexOf('!');      // output: 29
+x5=x4.length;      // output: 30
+x5=x4.indexOf('code');      // output: 4 searches from left to right(from index 0 to the end of the string) and by default it start searching at index 0.
+x5=x4.indexOf('code',5);      // output: 19 searches from left to right(from index [5 to the end of the string)
+x5=x4.indexOf('code',-5);      // output: 4 searches from left to right(from index [0 to the end of the string)
+x5=x4.lastIndexOf('code');   // output: 24 It searches from right to left and start at the end of the string by default.
+x5=x4.lastIndexOf('code',23);   // output: 19 It searches from right to left and starts at the index of 23].
+x5=x4.lastIndexOf('code',-5);   // output: -1 It searches from right to left and starts at the index of -5].
+x5=x4.lastIndexOf('');   // output:30 Empty string
+
+console.log(x5);
 
