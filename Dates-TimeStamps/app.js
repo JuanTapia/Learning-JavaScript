@@ -53,12 +53,41 @@ manana.setDate(2+fechaActual.getDate());
 console.log(manana);
 
 // We can time a For Loop
-const comienzo=new Date();
-for (let index = 0; index < 100000; index++) {
-    console.log(index);
+// const comienzo=new Date();
+// for (let index = 0; index < 100000; index++) {
+//     console.log(index);
     
-}
-const final=new Date();
-const tiempo=(final-comienzo)/1000;  // we devided by 1000 because the output is in miliseconds
-console.log(tiempo);
+// }
+// const final=new Date();
+// const tiempo=(final-comienzo)/1000;  // we devided by 1000 because the output is in miliseconds
+// console.log(tiempo);
+
+let x;
+const d=new Date();
+x=d;
+x=d.getDate(); // Day of the Month
+x=d.getDay();  // Day of the week
+x=`${d.getMonth()+1}-${d.getDate()}-${d.getFullYear()}`;
+// Calling the API and Passing the Date
+x=Intl.DateTimeFormat('en-US').format(d); // timeformat in USA
+x=Intl.DateTimeFormat('en-GB').format(d); // timeformat in Uk
+x=Intl.DateTimeFormat('default').format(d); // Back to timeformat in US
+x=Intl.DateTimeFormat('default',{month:'long'}).format(d); // January
+
+// Using toLocaleString
+x=d.toLocaleString('default',{month:'short'});  // Jan
+
+x=d.toLocaleString('default',{
+    weekday:'long',
+    year:'numeric',
+    month:'long',
+    day:'numeric',
+    hour:'numeric',
+    minute:'numeric',
+    second:'numeric',
+    timeZone:'America/Indianapolis',
+});
+
+console.log(x);
+
 
