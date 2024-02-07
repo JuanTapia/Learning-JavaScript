@@ -37,3 +37,54 @@ console.log(arr2);
 const newArray=arr2.map(item=>item*2);
 console.log(newArray);
 
+const items=[
+    {name:'Bike', price:100},
+    {name:'TV', price:200},
+    {name:'Album', price:10},
+    {name:'Book', price:5},
+    {name:'Phone', price:500},
+    {name:'Computer', price:1000},
+    {name:'Keyboard', price:25},
+]
+console.log(items);
+
+// El filtro de encontrar los precios mayores or igual de 500
+const filteredItems=items.filter(function(x){
+    return x.price>=500;
+})
+console.log(filteredItems);
+
+// El mapeo de los nombres de los Item
+const mapItems=items.map(function(x){
+    return x.name;
+})
+console.log(mapItems);
+
+// El mapeo de el doble de los precios de los Item
+const mapItems2=items.map(function(x){
+    return x.price*2;
+})
+console.log(mapItems2);
+
+// Encontrar el item llamado book
+const mapItems3=items.find(function(x){
+    return x.name==='Book';
+})
+console.log(mapItems3);
+
+// Print out the prices for each item
+items.forEach(function(x){
+    console.log(x.price)
+})
+
+// is it false or true that some of the prices are less then or equal to 25
+const esVerdad=items.some(function(x){
+    return x.price<=25;
+})
+console.log(esVerdad)
+
+// is it false or true that every price is less then or equal to 800
+const esVerdad2=items.every(function(x){
+    return x.price<=800;
+})
+console.log(esVerdad2)
