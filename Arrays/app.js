@@ -88,3 +88,16 @@ const esVerdad2=items.every(function(x){
     return x.price<=800;
 })
 console.log(esVerdad2)
+
+// Array.reduce(); reduce the array to only one elment
+const numeros=new Array(20,30,60,10);
+const suma=numeros.reduce(sumatoria,0);
+const max=numeros.reduce(maximo,0);
+function maximo(a,b){
+    return Math.max(a,b);
+}
+function sumatoria(a,b){
+    return a+b;
+}
+console.log(`$${suma.toFixed(2)}`);
+console.log(max);
