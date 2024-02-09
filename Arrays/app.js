@@ -124,3 +124,21 @@ const precioTotal=articulos.reduce((total,articulo)=>{
     console.log(total, articulo.precio)
     return total+articulo.precio},0);
 console.log(precioTotal);
+
+
+const gente=new Array(
+    {name:'Juan', age:45},
+    {name:'Jose', age:45},
+    {name:'Martin', age:30},
+    {name:'Paul', age:25},
+    {name:'Antonio', age:55},
+    
+);
+const resultado=gente.reduce((genteAcumulad,persona)=>{
+    const edad=persona.age;
+    if(genteAcumulad[edad]==null)
+    genteAcumulad[edad]=[]
+    genteAcumulad[edad].push(persona);
+    return genteAcumulad
+},{});
+console.log(resultado);
