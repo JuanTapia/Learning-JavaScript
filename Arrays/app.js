@@ -93,11 +93,34 @@ console.log(esVerdad2)
 const numeros=new Array(20,30,60,10);
 const suma=numeros.reduce(sumatoria,0);
 const max=numeros.reduce(maximo,0);
+const promedio=numeros.reduce(prome,0)/numeros.length;
+
+function prome (acc,va){
+    return acc+va;
+}
+
 function maximo(a,b){
     return Math.max(a,b);
-}
+};
+
 function sumatoria(a,b){
     return a+b;
-}
+};
+
 console.log(`$${suma.toFixed(2)}`);
 console.log(max);
+console.log(promedio);
+
+// Another Example
+const articulos=new Array(
+    {nonbre:'Rice', precio:5},
+    {nonbre:'Book', precio:20},
+    {nonbre:'chicken', precio:10},
+    {nonbre:'Monitor', precio:100},
+    );
+// let precioTotal=0;
+// articulos.forEach((total)=>precioTotal+=total.precio);
+const precioTotal=articulos.reduce((total,articulo)=>{
+    console.log(total, articulo.precio)
+    return total+articulo.precio},0);
+console.log(precioTotal);
